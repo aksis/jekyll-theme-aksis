@@ -2,17 +2,21 @@
 layout: default
 ---
 
-<article class="uk-article">
-    <header>
-        <h1 class="uk-article-title">{{ page.title }}</h1>
-        <p class="uk-text-meta">
-            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-            {% if page.author or site.author.name %}
-            | by <span>{{ page.author | default: site.author.name }}</span>
-            {% endif %}
-        </p>
-    </header>
-    <section class="uk-article-content">
-    {{ content }}
-    </section>
-</article>
+<section class="uk-section">
+  <div class="uk-container">
+    <article class="uk-article">
+        <header>
+            <h1 class="uk-article-title">{{ page.title }}</h1>
+            <p class="uk-article-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+                {% if page.author or site.author.name %}
+                | by <span>{{ page.author | default: site.author.name }}</span>
+                {% endif %}
+            </p>
+        </header>
+        <section class="uk-article-content">
+        {{ content }}
+        </section>
+    </article>
+  </div>
+</section>
