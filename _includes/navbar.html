@@ -3,6 +3,9 @@
     <div class="uk-container">
         <div uk-navbar>
             <div class="uk-navbar-left">
+                <a href="{{ '/' | absolute_url }}" class="uk-navbar-item uk-logo">{{ site.title | default: site.github.repository_name }}</a>
+            </div>
+            <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     {% for page in site.pages %}
                     {% if page.title %}
