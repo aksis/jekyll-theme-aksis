@@ -1,0 +1,16 @@
+<!-- Navigation -->
+<nav class="uk-navbar-container">
+    <div class="uk-container">
+        <div uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    {% for page in site.pages %}
+                    {% if page.title %}
+                    <li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
