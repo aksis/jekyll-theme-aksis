@@ -1,10 +1,17 @@
 <!-- Footer -->
-<footer class="uk-section uk-section-muted uk-padding-small">
+<footer class="uk-section uk-section-muted uk-section-small">
     <div class="uk-container">
         {% if jekyll.environment == "development" %}
         <p class="uk-text-small uk-margin-remove-bottom">Built with <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> v{{ jekyll.version }} and <a href="https://getuikit.com/" target="_blank" rel="noopener">UIkit</a> v3.<br>Environment: {{ jekyll.environment }}</p>
         {% endif %}
-        <p><small>&copy; <time datetime="{{ site.time | date: '%Y' }}">{{ site.time | date: '%Y' }}</time> {{ site.title | default: site.github.repository_name | escape }}</small></p>
+        <div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
+            <div>
+                <small>&copy; <time datetime="{{ site.time | date: '%Y' }}">{{ site.time | date: '%Y' }}</time> {{ site.title | default: site.github.repository_name | escape }}</small>
+            </div>
+            <div class="uk-text-right@s">
+                <a href="#" uk-totop uk-scroll></a>
+            </div>
+        </div>
     </div>
 </footer>
 <!-- End Footer -->
