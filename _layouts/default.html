@@ -2,8 +2,16 @@
 layout: base
 ---
 
-<main id="main">
-    <div class="uk-container">
+<article class="uk-article">
+    <header class="uk-article-title-wrap">
+        <h1 class="uk-article-title">{{ page.title }}</h1>
+        {% if page.date %}
+        <p class="uk-article-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        </p>
+        {% endif %}
+    </header>
+    <section class="uk-article-content">
     {{ content }}
-    </div>
-</main>
+    </section>
+</article>
