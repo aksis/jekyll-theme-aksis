@@ -8,13 +8,22 @@
 		"4000": {
 			"label": "jekyll"
 		}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	"forwardPorts": [
+		"localhost:4000"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Keno.uikit-3-snippets"
+			]
+		}
+	}
 
 	// Uncomment the next line to run commands after the container is created.
 	// "postCreateCommand": "jekyll --version"
