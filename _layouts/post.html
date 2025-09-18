@@ -17,10 +17,10 @@ layout: default
         <nav class="uk-margin-large uk-text-center">
             <ul class="uk-pagination uk-flex-center">
                 {% if page.previous %}
-                <li class="uk-margin-auto-right"><a href="{{ page.previous.url }}"><span uk-pagination-previous></span> Previous</a></li>
+                <li class="uk-margin-auto-right"><a href="{{ page.previous.url | absolute_url }}"><span uk-pagination-previous></span> Previous</a></li>
                 {% endif %}
                 {% if page.next %}
-                <li class="uk-margin-auto-left"><a href="{{ page.next.url }}">Next <span uk-pagination-next></span></a></li>
+                <li class="uk-margin-auto-left"><a href="{{ page.next.url | absolute_url }}">Next <span uk-pagination-next></span></a></li>
                 {% endif %}
             </ul>
         </nav>
